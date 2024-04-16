@@ -2,5 +2,5 @@
 
 {
 	nixpkgs.config.allowUnfree = true;
-	networking.hostName = "aq-${aq.qore}";
+	networking.hostName = "aq-${config.aq.qore}";
 }

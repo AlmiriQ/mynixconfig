@@ -13,15 +13,13 @@
 			aq-vanessa = lib.nixosSystem {
 				system = "x86_64-linux";
 				modules = [
-					./options-vanessa.nix
-					./aq.nix
+					./device/vanessa.nix
 				];
 			};
 			aq-ivy = lib.nixosSystem {
 				system = "x86_64-linux";
 				modules = [
-					./options-ivy.nix
-					./aq.nix
+					./device/ivy.nix
 				];
 			};
 		};

@@ -1,7 +1,11 @@
 { config, pkgs, ... }:
 
 {
-	networking = {
+	networking = if (config.aq.portable) then {
+		networkmanager.enable = true;
+		firewall.enable = false;
+	} else {
+		networkmanager.enable = false;
 		firewall.enable = false;
 		interfaces = {
 			eno1 = {
