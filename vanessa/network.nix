@@ -2,8 +2,6 @@
 
 {
 	networking = {
-		hostName = "aq-vanessa";
-		networkmanager.enable = false;
 		firewall.enable = false;
 		interfaces = {
 			eno1 = {

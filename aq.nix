@@ -2,13 +2,14 @@
 
 {
 	imports = [
-		/etc/nixos/hardware-configuration.nix
-		./users-vanessa.nix
+		./hardware-configuration.nix
+		./users.nix
 		./bootloader.nix
-		./audio.nix
-		./graphics.nix
-		./network-vanessa.nix
+		./hardware/audio.nix
+		./hardware/graphics.nix
+		./network.nix
 		./locale.nix
+		./ssh.nix
 	];
 
 	nixpkgs.config.allowUnfree = true;

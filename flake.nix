@@ -12,11 +12,17 @@
 		nixosConfigurations = {
 			aq-vanessa = lib.nixosSystem {
 				system = "x86_64-linux";
-				modules = [ ./aq-vanessa.nix ];
+				modules = [
+					./options-vanessa.nix
+					./aq.nix
+				];
 			};
 			aq-ivy = lib.nixosSystem {
 				system = "x86_64-linux";
-				modules = [ ./aq-ivy.nix ];
+				modules = [
+					./options-ivy.nix
+					./aq.nix
+				];
 			};
 		};
 	};

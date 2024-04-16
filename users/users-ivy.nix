@@ -30,9 +30,6 @@ in {
 			++ terminalApps
 			++ languages;
 		};
-		root = {
-			# isNormalUser = true;
-			# home = "/root";
-		};
+		root = { };
 	};
 }
