@@ -1,17 +1,17 @@
 # mynixconfig
 Choose aq-ivy or aq-vanessa
-```sh
+```bash
 hostname aq-ivy
 ```
 Clone repository
-```sh
+```bash
 git clone https://github.com/AlmiriQ/mynixconfig.git ~/.dotfiles && cd ~/.dotfiles
 ```
 Set up for grub
-```sh
+```bash
 ./setup/grub.sh
 ```
 Start the flake
-```sh
+```bash
 nixos-rebuild switch --flake . --impure
 ```
