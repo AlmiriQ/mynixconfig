@@ -2,7 +2,7 @@
 
 {
 	networking = {
-		hostName = "aqvanessa";
+		hostName = "aq-vanessa";
 		networkmanager.enable = false;
 		firewall.enable = false;
 		interfaces = {
