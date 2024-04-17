@@ -17,7 +17,9 @@
 	aq.qore = "vanessa";
 	aq.portable = false;
 
-	environment.systemPackages = with pkgs; [];
+	environment.systemPackages = with pkgs; [
+		zulu
+	];
 
-	system.stateVersion = "23.11";
+	system.stateVersion = "24.05";
 }
