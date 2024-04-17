@@ -11,6 +11,10 @@ Set up for grub
 ```bash
 ./setup/grub.sh
 ```
+Copy hardware configuration
+```bash
+./setup/hardware.sh
+```
 Start the flake
 ```bash
 nixos-rebuild switch --flake . --impure
