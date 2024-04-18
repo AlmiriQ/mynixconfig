@@ -16,7 +16,5 @@
 	aq.qore = "ivy";
 	aq.portable = true;
 
-	environment.systemPackages = with pkgs; [];
-
 	system.stateVersion = "23.11";
 }
