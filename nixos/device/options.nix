@@ -4,7 +4,7 @@
 	options = {
 		aq.qore = lib.mkOption {
 			type = lib.types.str;
-			default = "";
+			default = "qore";
 		};
 		aq.portable = lib.mkOption {
 			type = lib.types.bool;

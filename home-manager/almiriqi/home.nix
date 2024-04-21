@@ -14,8 +14,7 @@
 	home.packages = (import ./packages.nix) pkgs;
 	# home.file = { };
 
-	home.sessionVariables = {
-	};
+	home.sessionVariables = { };
 	
 	programs.home-manager.enable = true;
 

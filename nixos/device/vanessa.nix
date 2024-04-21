@@ -3,7 +3,7 @@
 {
 	imports = [
 		./options.nix
-		./default.nix
+		./any.nix
 		./../hardware-configuration.nix
 		./../users.nix
 		./../network.nix
@@ -11,10 +11,15 @@
 		./../hardware/audio.nix
 		./../hardware/graphics.nix
 		./../locale.nix
+		./../ssh.nix
 	];
 
-	aq.qore = "ivy";
-	aq.portable = true;
+	aq.qore = "vanessa";
+	aq.portable = false;
 
-	system.stateVersion = "23.11";
+	networking.hostName = "aq-alpha";
+
+	system.stateVersion = "24.05";
+	
+	programs.steam.enable = true;
 }

@@ -3,7 +3,7 @@
 {
 	imports = [
 		./options.nix
-		./default.nix
+		./any.nix
 		./../hardware-configuration.nix
 		./../users.nix
 		./../network.nix
@@ -11,11 +11,12 @@
 		./../hardware/audio.nix
 		./../hardware/graphics.nix
 		./../locale.nix
-		./../ssh.nix
 	];
 
-	aq.qore = "vanessa";
-	aq.portable = false;
+	aq.qore = "ivy";
+	aq.portable = true;
+
+	networking.hostName = "aq-omega";
 
 	system.stateVersion = "24.05";
 }

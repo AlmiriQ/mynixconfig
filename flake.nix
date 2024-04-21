@@ -3,25 +3,50 @@
 
 	inputs = {
 		nixpkgs.url = "nixpkgs/nixos-unstable";
+		nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.11";
+
+		home-manager = {
+			url = "github:nix-community/home-manager";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
 	};
 
-	outputs = {self, nixpkgs, ... }:
+	outputs = { self, nixpkgs, nixpkgs-stable, home-manager, ... }:
 	let
 		lib = nixpkgs.lib;
+		linux64 = "x86_64-linux";
 	in {
 		nixosConfigurations = {
-			aq-vanessa = lib.nixosSystem {
-				system = "x86_64-linux";
+			defaut = { # any new device
+				system = linux64;
 				modules = [
-					./device/vanessa.nix
+					./nixos/device/defaut.nix
 				];
 			};
-			aq-ivy = lib.nixosSystem {
-				system = "x86_64-linux";
+			vanessa = lib.nixosSystem { # my pc
+				system = linux64;
 				modules = [
-					./device/ivy.nix
+					./nixos/device/vanessa.nix
 				];
 			};
+			ivy = lib.nixosSystem { # my laptop
+				system = linux64;
+				modules = [
+					./nixos/device/ivy.nix
+				];
+			};
+		};
+
+		# my personal account
+		homeConfigurations.almiriqi = home-manager.lib.homeManagerConfiguration {
+			pkgs = nixpkgs.legacyPackages.${linux64};
+			modules = [ ./home-manager/almiriqi/home.nix ];
+		};
+
+		# maria's account
+		homeConfigurations.maria = home-manager.lib.homeManagerConfiguration {
+			pkgs = nixpkgs.legacyPackages.${linux64};
+			modules = [ ./home-manager/maria/home.nix ];
 		};
 	};
 }
