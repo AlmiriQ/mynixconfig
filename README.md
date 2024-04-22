@@ -5,5 +5,5 @@ git clone https://github.com/AlmiriQ/mynixconfig.git ~/.dotfiles && cd ~/.dotfil
 ```
 Start the flake
 ```bash
-nixos-rebuild switch --flake .
+sudo nixos-rebuild switch --flake .
 ```

@@ -1,5 +1,6 @@
 pkgs: with pkgs; [
 	firefox
+	git
 	telegram-desktop
 	neofetch
 	btop
