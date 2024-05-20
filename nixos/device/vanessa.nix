@@ -19,6 +19,8 @@
 
 	networking.hostName = "aq-alpha";
 
+	services.flatpak.enable = true;
+
 	system.stateVersion = "24.05";
 	
 	programs.steam.enable = true;
